@@ -1,0 +1,15 @@
+On va voir c'est quoi un state
+c'est quoi babel ?
+C'est quoi un state ?
+les principe fondamentaux de react 
+Conditional rendering 
+COmment creer un projet react localement 
+Comment on peut tester un projet react (react dev tool)
+Comment installer un projet react avec npm
+
+Comment configuer le projet et changer les parametre 
+
+Comencer a creer un projet react interface d'un site web e-commerce ! 
+chacun va creer les composants d'un site web e-commerce ! 
+Ajout vers panier 
+

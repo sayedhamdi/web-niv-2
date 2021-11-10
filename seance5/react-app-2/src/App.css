@@ -1,0 +1,20 @@
+.App{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  background:rgb(100,0,100);
+  font-size: 24px;
+  font-family: courier;
+  height:90vh;
+}
+.button{
+  margin:20px;
+  background-color:orange;
+  padding:20px 40px;
+  font-size:18px;
+  border:none;
+  color:blue;
+  font-weight:900;
+  box-shadow:4px 8px 16px grey;
+}

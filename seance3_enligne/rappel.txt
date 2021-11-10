@@ -1,0 +1,33 @@
+git / github
+
+git ?
+    linus ==> linux open source project 
+    git  => gerer le versionnage du code 
+    version 
+    ------------------------------------
+    notion branch 
+     dans chaque branche il y a des commits
+     commit -> snapshot code 
+
+    -local repo
+    -remote repository --> github
+    ---gitlab---
+    
+    git init (dans un dossier)
+    
+        
+
+    
+
+importation exportation / ES6
+yama "commonjs"
+
+ES6 module   
+
+sabina node.js
+
+npm (node package manager)
+
+fichier esmou package.json
+
+

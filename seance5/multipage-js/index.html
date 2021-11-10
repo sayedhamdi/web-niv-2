@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>multipage js</title>
+</head>
+
+<body>
+    <div id="page1">
+        page 1
+        
+    </div>
+    <div id="page2">
+        page 2
+    </div>
+    <div id="page3">
+        page 3
+    </div>
+    <button data-page="page1">page1</button>
+    <button data-page="page2">page2</button>
+    <button data-page="page3">page3</button>
+</body>
+<script>
+
+    document.querySelectorAll("button").forEach(button => {
+        let selector = button.dataset.page
+        let page = document.getElementById(selector)
+        page.style.display = 'none'
+        button.onclick = (e) => {
+            removePages()
+            let page = document.getElementById(e.target.dataset.page)
+            document.title = selector
+            window.history.pushState('', selector, `/${selector}`);
+            page.style.display = "block"
+        }
+    })
+    function removePages() {
+        document.querySelectorAll("button").forEach(button => {
+            let selector = button.dataset.page
+            let page = document.getElementById(selector)
+            page.style.display = 'none'
+        })
+    }
+
+    document.querySelector("#page1").style.display = "block"
+</script>
+
+</html>

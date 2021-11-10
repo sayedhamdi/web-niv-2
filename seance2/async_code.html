@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+	function printOne() {
+		console.log("one")
+	}
+	function printTwo() {
+		console.log("Two")
+	}
+	function printThree() {
+		console.log("Three")
+	}
+
+	setTimeout(printThree, 0);
+	setTimeout(printTwo, 1000);
+	printOne();
+	//let url = "https://www.google.com"
+	let url = "http://api.exchangeratesapi.io/v1/latest?access_key=01516af766696ad129b060a627689d8e"
+
+	fetch(url)
+		.then(response => response.json())
+		.then(data => {
+			let { TND, USD, EGP } = data.rates
+			console.log(TND, USD, EGP)
+		})
+		.catch(error => {
+			console.log("error :", error)
+		})
+</script>
+
+</html>

@@ -1,0 +1,9 @@
+Plan seance 28-10-2021 :
+    -React :
+        -Higher order componenets
+        -component lifecycle 
+        -Hooks ? useEffect
+        useState
+        custom hooks
+        -forms with react
+        -api calls 

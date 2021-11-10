@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Rate Exchange Converter</h1>
+	<input type="text">
+	<select name="" id="">
+		<option value="TND">TND</option>
+		<option value="USD">USD</option>
+		<option value="EGP">EGP</option>
+	</select>
+	<button>Convert</button>
+	<p class="result">
+
+	</p>
+</body>
+<script type="module">
+	let date = ""
+
+	let url = `http://api.exchangeratesapi.io/v1/${(date) ? date : "latest"}?access_key=01516af766696ad129b060a627689d8e`
+	/*if (date) {
+		let url = "http://api.exchangeratesapi.io/v1/" + date + "?access_key = 01516af766696ad129b060a627689d8e"
+	}*/
+	let rates
+	fetch(url)
+		.then(response => response.json())
+		.then(data => {
+			rates = data.rates
+		})
+		.catch(error => {
+			console.log("error :", error)
+		})
+
+	async function getData() {
+
+
+	}
+
+
+	document.querySelector("button").onclick = () => {
+		let value = document.querySelector("input").value
+		let exchangeRate = document.querySelector("select").value
+		document.querySelector(".result").innerText = `${value} en EUR is ${value * rates[exchangeRate]} en ${exchangeRate}`
+	}
+</script>
+
+</html>
